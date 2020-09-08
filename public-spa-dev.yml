@@ -1,0 +1,67 @@
+trigger:
+- master
+
+variables:
+- group: TERRAFORM_DEV
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
+#- task: npmAuthenticate@0
+#  inputs:
+#    workingFile: .npmrc
+
+# - task: Npm@1
+#   inputs:
+#     command: 'install'
+
+- script: |
+    npm install --no-package-lock
+  displayName: 'npm install'
+
+- task: replacetokens@3
+  inputs:
+    rootDirectory: '$(System.DefaultWorkingDirectory)'
+    targetFiles: '$(System.DefaultWorkingDirectory)\.env.production'
+    encoding: 'auto'
+    writeBOM: true
+    verbosity: 'detailed'
+    actionOnMissing: 'warn'
+    keepToken: false
+    tokenPrefix: '__'
+    tokenSuffix: '__'
+    useLegacyPattern: false
+    enableTelemetry: true
+
+- script: |
+    yarn build --verbose
+  displayName: 'yarn build'
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/build/'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(System.DefaultWorkingDirectory)/MPIS.Admin.SPA.zip'
+    replaceExistingArchive: true
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder:  '$(System.DefaultWorkingDirectory)'
+    Contents: 'MPIS.Admin.SPA.zip'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
+
