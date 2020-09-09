@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "id": "ff332244",
+      "mac_device": "0A0027000003",
+      "name": "Microsoft Windows 10.0.18363"
+    },
+    {
+      "id": "aa332244",
+      "mac_device": "0A0027000003",
+      "name": "Ubuntu 18.04"
+    }
+  ]
+}

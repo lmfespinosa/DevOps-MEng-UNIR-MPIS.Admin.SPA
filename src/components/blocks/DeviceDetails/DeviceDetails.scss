@@ -1,0 +1,9 @@
+.device-details {
+  margin-bottom: 24px;
+  display: flex;
+  ul + ul {
+    margin-left: 24px;
+    padding-left: 24px;
+    border-left: 1px solid black;
+  }
+}

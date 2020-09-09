@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "id": "ff332244",
+      "path": "\\\\DESKTOP-AU95KCK\\root\\cimv2:Win32_PortableBattery.DeviceID=\"Portable Battery 0\"",
+      "device": "Portable Battery",
+      "type_hardware": "Battery",
+      "description": "descripción del hardware",
+      "mac_device": "0A0027000003"
+    },
+    {
+      "id": "aa332244",
+      "path": "\\\\DESKTOP-AU95KCK\\root\\cimv2:Win32_Processor.DeviceID=\"CPU0\"",
+      "device": "CPU 0",
+      "type_hardware": "CPU",
+      "description": "CPU",
+      "mac_device": "0A0027000003"
+    }
+  ]
+}

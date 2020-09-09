@@ -1,0 +1,28 @@
+// reset
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  li {}
+}
+label {
+  margin: 0px;
+}
+// general styles
+section {
+  margin-top: 80px;
+}
+h2 {
+  position: relative;
+  color: $gray-dark;
+  padding-bottom: 10px;
+  margin-bottom: 32px;
+  &::before {
+    position: absolute;
+    bottom: 0px;
+    content: '';
+    height: 4px;
+    width: 80px;
+    background-color: $accent;
+  }
+}

@@ -1,12 +1,25 @@
 import React from 'react';
-//import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './App.scss';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
+// pages
+import Login from './components/pages/Login/Login';
+import DevicesList from './components/pages/DevicesList/DevicesList';
+import Unknown from './components/pages/Unknown/Unknown';
 
 function App() {
   return (
-    <div className="App">
-      <h3>Build Sign Up & Login UI Template in React</h3>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/login" exact component={Login} />
+        <Route path="/listado-de-dispositivos" exact component={DevicesList} />
+        <Route path="/404" exact component={Unknown} />
+      </Switch>
+    </Router>
   );
 }
 

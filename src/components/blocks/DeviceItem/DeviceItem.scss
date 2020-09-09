@@ -1,0 +1,13 @@
+@import 'src/styles/common/variables.scss';
+
+.device-item {
+  .device-item__label, .device-item__input {
+    cursor: pointer;
+    color: $gray-dark;
+    &:hover {
+    }
+  }
+  .device-item__input {
+    display: none;
+  }
+}

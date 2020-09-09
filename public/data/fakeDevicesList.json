@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "mac": "Dispositivo 1: 0A0027000003"
+    },
+    {
+      "mac": "Dispositivo 2: 0A0027000004"
+    },
+    {
+      "mac": "Dispositivo 3: 0A0027000005"
+    },
+    {
+      "mac": "Dispositivo 4: 0A0027000006"
+    },
+    {
+      "mac": "Dispositivo 5: 0A0027000007"
+    },
+    {
+      "mac": "Dispositivo 6: 0A0027000008"
+    },
+    {
+      "mac": "Dispositivo 7: 0A0027000009"
+    },
+    {
+      "mac": "Dispositivo 8: 0A0027000010"
+    }
+  ]
+}
