@@ -2,7 +2,6 @@ trigger:
 - master
 
 variables:
-variables:
 - group: COMMON
 - group: TERRAFORM_DEV
 
