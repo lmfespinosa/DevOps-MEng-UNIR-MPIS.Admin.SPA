@@ -10,7 +10,7 @@ const DevicesList: React.FC = function () {
 
   useEffect(() => {
 
-    fetch(`http://localhost:3000/data/fakeDevicesList.json`, {
+    fetch(`https://app-publicspa-mpis-dev.azurewebsites.net/data/fakeDevicesList.json`, {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
