@@ -13,7 +13,7 @@ const DeviceDetails: React.FC<IDeviceDetails> = function ({ paramsFetch }) {
 
   useEffect(() => {
     // HARDWAER
-    fetch(`http://localhost:3000/data/fakeHardwareByDevice.json`, {
+    fetch(`https://app-publicspa-mpis-dev.azurewebsites.net/data/fakeHardwareByDevice.json`, {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
@@ -25,7 +25,7 @@ const DeviceDetails: React.FC<IDeviceDetails> = function ({ paramsFetch }) {
       })
       .catch((err) => console.log(err))
     // SOFTWARE
-    fetch(`http://localhost:3000/data/fakeSoftware.json`, {
+    fetch(`https://app-publicspa-mpis-dev.azurewebsites.net/data/fakeSoftware.json`, {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
@@ -37,7 +37,7 @@ const DeviceDetails: React.FC<IDeviceDetails> = function ({ paramsFetch }) {
       })
       .catch((err) => console.log(err))
     // OPERATIVE SYSTEM
-    fetch(`http://localhost:3000/data/fakeOperativeSystem.json`, {
+    fetch(`https://app-publicspa-mpis-dev.azurewebsites.net/data/fakeOperativeSystem.json`, {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
